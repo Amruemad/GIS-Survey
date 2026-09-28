@@ -197,7 +197,11 @@
         <p>Tell us a bit about how you like to work.</p>
     </div>
 
-    <form onsubmit="event.preventDefault(); alert('Survey submitted successfully!');">
+    <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+        <!-- Optional: Redirect back to the site after submission instead of Formsubmit's default page -->
+        <input type="hidden" name="_next" value="https://your-deployed-github-pages-url.com">
+        <input type="hidden" name="_subject" value="New Work Preferences Survey Submission">
+        <input type="hidden" name="_captcha" value="false">
         <div class="form-group">
             <label for="name">1. Full Name</label>
             <input type="text" id="name" name="name" placeholder="John Doe" required>
